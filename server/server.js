@@ -4,6 +4,7 @@ import connectDb from "./db.js";
 import cors from 'cors'
 import dotenv from 'dotenv'
 import router from "./routes/userRoute.js";
+import serverless from  "serverless-http"
 
 const app = express();
 connectDb();
@@ -18,5 +19,4 @@ const PORT  = process.env.PORT;
 app.listen(PORT,()=>{
     console.log(`Server Running on Port ${PORT}`.bgWhite);
 })
-
 
